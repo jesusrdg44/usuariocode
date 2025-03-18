@@ -1,17 +1,8 @@
 <?php
-
 /*
  | --------------------------------------------------------------------
  | App Namespace
  | --------------------------------------------------------------------
- |
- | This defines the default Namespace that is used throughout
- | CodeIgniter to refer to the Application directory. Change
- | this constant to change the namespace that all application
- | classes should use.
- |
- | NOTE: changing this will require manually modifying the
- | existing namespaces of App\* namespaced-classes.
  */
 defined('APP_NAMESPACE') || define('APP_NAMESPACE', 'App');
 
@@ -19,19 +10,13 @@ defined('APP_NAMESPACE') || define('APP_NAMESPACE', 'App');
  | --------------------------------------------------------------------------
  | Composer Path
  | --------------------------------------------------------------------------
- |
- | The path that Composer's autoload file is expected to live. By default,
- | the vendor folder is in the Root directory, but you can customize that here.
  */
 defined('COMPOSER_PATH') || define('COMPOSER_PATH', ROOTPATH . 'vendor/autoload.php');
 
 /*
- |--------------------------------------------------------------------------
+ |---------------------------------------------------------------------------
  | Timing Constants
- |--------------------------------------------------------------------------
- |
- | Provide simple ways to work with the myriad of PHP functions that
- | require information to be in seconds.
+ |---------------------------------------------------------------------------
  */
 defined('SECOND') || define('SECOND', 1);
 defined('MINUTE') || define('MINUTE', 60);
@@ -46,62 +31,78 @@ defined('DECADE') || define('DECADE', 315360000);
  | --------------------------------------------------------------------------
  | Exit Status Codes
  | --------------------------------------------------------------------------
- |
- | Used to indicate the conditions under which the script is exit()ing.
- | While there is no universal standard for error codes, there are some
- | broad conventions.  Three such conventions are mentioned below, for
- | those who wish to make use of them.  The CodeIgniter defaults were
- | chosen for the least overlap with these conventions, while still
- | leaving room for others to be defined in future versions and user
- | applications.
- |
- | The three main conventions used for determining exit status codes
- | are as follows:
- |
- |    Standard C/C++ Library (stdlibc):
- |       http://www.gnu.org/software/libc/manual/html_node/Exit-Status.html
- |       (This link also contains other GNU-specific conventions)
- |    BSD sysexits.h:
- |       http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
- |    Bash scripting:
- |       http://tldp.org/LDP/abs/html/exitcodes.html
- |
  */
-defined('EXIT_SUCCESS')        || define('EXIT_SUCCESS', 0); // no errors
-defined('EXIT_ERROR')          || define('EXIT_ERROR', 1); // generic error
-defined('EXIT_CONFIG')         || define('EXIT_CONFIG', 3); // configuration error
-defined('EXIT_UNKNOWN_FILE')   || define('EXIT_UNKNOWN_FILE', 4); // file not found
-defined('EXIT_UNKNOWN_CLASS')  || define('EXIT_UNKNOWN_CLASS', 5); // unknown class
-defined('EXIT_UNKNOWN_METHOD') || define('EXIT_UNKNOWN_METHOD', 6); // unknown class member
-defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7); // invalid user input
-defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
-defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
-defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+defined('EXIT_SUCCESS')        || define('EXIT_SUCCESS', 0);
+defined('EXIT_ERROR')          || define('EXIT_ERROR', 1);
+defined('EXIT_CONFIG')         || define('EXIT_CONFIG', 3);
+defined('EXIT_UNKNOWN_FILE')   || define('EXIT_UNKNOWN_FILE', 4);
+defined('EXIT_UNKNOWN_CLASS')  || define('EXIT_UNKNOWN_CLASS', 5);
+defined('EXIT_UNKNOWN_METHOD') || define('EXIT_UNKNOWN_METHOD', 6);
+defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7);
+defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8);
+defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9);
+defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125);
 
 /**
- * Define a constant
- * define('constant_name', 'value');
- * 
- * define('CONSTANT_NAME', 1000);------------NUEMROS
- * define('CONSTANT_NAME', 'aaa' || 'a');----CARACTERES
- * define('CONSTANT_NAME', array());---------ARREGLOS
+ * Constantes para la aplicación.
  */
 
- // CONSTANTES PARA LA USUARIO (/InicioSesion)
- define('RECURSO_USARIO_CSS', 'recursos_usuario/css');
- define('RECURSO_USARIO_JS', 'recursos_usuario/js');
- define('RECURSO_USARIO_VENDOR', 'recursos_usuario/vendor');
- define('RECURSO_USARIO_FONTS', 'recursos_usuario/fonts');
- define('RECURSO_USARIO_IMAGE', 'recursos_usuario/images');
+// CONSTANTES PARA EL USUARIO (/InicioSesion)
+define('RECURSO_USARIO_CSS', 'recursos_usuario/css');
+define('RECURSO_USARIO_JS', 'recursos_usuario/js');
+define('RECURSO_USARIO_VENDOR', 'recursos_usuario/vendor');
+define('RECURSO_USARIO_FONTS', 'recursos_usuario/fonts');
+define('RECURSO_USARIO_IMAGE', 'recursos_usuario/images');
+define('RECURSO_USARIO_PLUGINS', 'recursos_usuario/plugins');
 
- // CONSATANES PARA EL PANEL (/dashboard)
- define('RECURSO_PANEL_BUIDL','recursos_panel/build');
- define('RECURSO_PANEL_DIST','recursos_panel/dist');
- define('RECURSO_PANEL_DOCS','recursos_panel/docs');
- define('RECURSO_PANEL_PAGES','recursos_panel/pages');
- define('RECURSO_PANEL_PLUGINS','recursos_panel/plugins');
+// CONSTANTES PARA EL PANEL (/dashboard)
+define('RECURSO_PANEL_BUIDL', 'recursos_panel/build');
+define('RECURSO_PANEL_DIST', 'recursos_panel/dist');
+define('RECURSO_PANEL_DOCS', 'recursos_panel/docs');
+define('RECURSO_PANEL_PAGES', 'recursos_panel/pages');
+define('RECURSO_PANEL_PLUGINS', 'recursos_panel/plugins');
 
- define ('SUCCESS_ALERT', 'success');
- define ('WARNING_ALERT', 'warning');
- define ('INFO_ALERT', 'info');
- define ('ERROR_ALERT', 'error');
+define('SUCCESS_ALERT', 'success');
+define('WARNING_ALERT', 'warning');
+define('INFO_ALERT', 'info');
+define('ERROR_ALERT', 'error');
+
+define('MASCULINO', 'M');
+define('FEMENINO', 'F');
+
+define('RECURSO_PANEL_IMG_PROFILES_USER', 'images/profile-user');
+
+define('ESTATUS_HABILITADO', 'estatus_habilitado');
+define('ESTATUS_DESABILITADO', 'estatus_deshabilitado');
+
+// Tarea para el Dashboard (se utiliza "dashboard" para coincidir con el permiso)
+define('TAREA_DASHBOARD', 'dashboard');
+
+// Permisos según el rol
+define('PERMISOS_ADMINISTRADOR', [
+    'dashboard',
+    'usuarios',
+    'roles',
+    'configuracion'
+]);
+
+define('PERMISOS_USUARIO', [
+    'dashboard',
+    'perfil'
+]);
+
+// Roles con sus claves (actualizamos el administrador a 745 para que coincida con la BD)
+define('ROL_ADMINISTRADOR', [
+    'clave' => 745,
+    'nombre' => 'Administrador'
+]);
+
+define('ROL_OPERADOR', [
+    'clave' => 125,
+    'nombre' => 'Operador'
+]);
+
+define('ROL_USUARIO', [
+    'clave' => 'USER',
+    'nombre' => 'Usuario'
+]);

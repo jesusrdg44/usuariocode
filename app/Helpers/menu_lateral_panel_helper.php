@@ -15,7 +15,7 @@ use PhpParser\Node\Scalar\Float_;
      *          [Opcion C1.1]
      */
 
-    function configurar_menu_panel(){
+    function configurar_menu_panel($tarea_actual = ''){
         //PERMITE ALMACENAR TODAS LAS OPCIONES DENTRO DEL MENU
         $menu = array();
 
@@ -27,7 +27,7 @@ use PhpParser\Node\Scalar\Float_;
 
         //TAREA DASHBAORD
         $menu_opcion = array();
-        $menu_opcion['is_active']= FALSE;
+        $menu_opcion['is_active']= ($tarea_actual == TAREA_DASHBOARD) ? TRUE : FALSE;
         $menu_opcion['href']= route_to("dasboard");
         $menu_opcion['text']='Dashboard';
         $menu_opcion['icon']='fa fa-area-chart';
@@ -61,8 +61,8 @@ use PhpParser\Node\Scalar\Float_;
         return $menu;
     }// end configurar_menu_panel
 
-    function crear_menu_panel(){
-        $menu = configurar_menu_panel();
+    function crear_menu_panel($tarea_actual = ''){
+        $menu = configurar_menu_panel($tarea_actual);
         //dd($menu);
         $html = '';
         $html.= '

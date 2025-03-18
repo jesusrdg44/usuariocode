@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="<?= base_url(RECURSO_PANEL_DIST.'/css/adminlte.min.css')?>">
   <!-- Toastr Alerts -->
   <link rel="stylesheet" href="<?= base_url(RECURSO_PANEL_PLUGINS. '/toastr/toastr.min.css')?>">
+  
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="<?= base_url(RECURSO_PANEL_PLUGINS.'/overlayScrollbars/css/OverlayScrollbars.min.css')?>">
   
@@ -55,6 +56,9 @@
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="<?= route_to('salir_admin') ?>" class="nav-link">Cerrar Sesion</a>
       </li>
     </ul>
 
@@ -194,10 +198,11 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url(RECURSO_PANEL_DIST.'/img/user2-160x160.jpg') ?>" class="img-circle elevation-2" alt="User Image">
+        <img src="<?= base_url(RECURSO_PANEL_IMG_PROFILES_USER . '/' . $imagen) ?>" class="img-circle elevation-2">
+
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?= $nombre_usuarios?></a>
         </div>
       </div>
 

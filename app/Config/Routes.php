@@ -38,9 +38,13 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/ejemplo', 'Home::example');
-$routes->get('/login', 'InicioSesion::index');
+// $routes->get('/login', 'InicioSesion::index');
+$routes->get('/login', 'Usuario/Login::index');
+$routes->post('/iniciar_sesion', 'Usuario/Login::hola');
+
 //$routes->get('/inicio_sesion', 'InicioSesion::index', ['as' => '']);
 $routes->get('/dashboard', 'Panel/Dashboard::index');
+$routes->get('/salir_admin', 'Usuario/CerrarSesion::index');
 
 
 /*
